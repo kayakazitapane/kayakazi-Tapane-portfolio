@@ -1,0 +1,368 @@
+/* Base styles */
+body {
+    background: black;
+    color: beige;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Home Section */
+  #header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/background.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+  }
+  
+  .container {
+    padding: 5px 5%;
+  }
+  
+  nav {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 50px;
+    font-style: oblique;
+    font-weight: bolder;
+    font-size: 30px;
+  }
+  
+  nav ul li a {
+    color: aqua;
+    text-decoration: none;
+    position: relative;
+  }
+  
+  .fixed-nav h2 {
+    color: blueviolet;
+    font-style: italic;
+    font-size: 30px;
+  }
+  
+  .fixed-nav h2 span {
+    color: darkgoldenrod;
+  }
+  
+  .header-text {
+    margin-top: 200px;
+    font-size: 30px;
+  }
+  
+  .header-text h1 {
+    font-size: 50px;
+    font-weight: bold;
+    color: #272142;
+  }
+  
+  .header-text h1 span {
+    color: darksalmon;
+  }
+  .fixed-nav {
+    position: fixed;
+    top: 0;
+    width: 90%; /* Background color for visibility */
+    z-index: 1000; /* Ensures it stays on top of other content */
+    box-shadow: pink; /* Optional shadow for depth */
+}
+
+.fixed-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.fixed-nav li a {
+    text-decoration: none;
+    color: #333; /* Change to your preferred color */
+    padding: 10px;
+}
+  
+  /* About Section */
+  #about {
+    padding: 80px 0;
+    color: #ababab;
+  }
+  
+  .row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .about-col-1 {
+    flex-basis: 40%;
+  }
+  
+  .about-col-1 img {
+    width: 100%;
+  }
+  
+  .about-col-2 {
+    flex-basis: 55%;
+    margin-top: 50px;
+    font-size: 16px;
+  }
+  
+  .sub-title {
+    text-align: center;
+    color: blue;
+    font-size: 30px;
+  }
+  
+  /* Skills Section */
+  #Skills {
+    padding: 80px;
+    color: #ababab;
+    margin-bottom: 100px;
+  }
+  
+  .section-header {
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    color: blueviolet;
+  }
+  
+  .inline-sections {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+  }
+  
+  .inline-sections div {
+    font-size: 18px;
+  }
+  strong{
+    font-style: italic;
+    color:#007BFF;
+  }
+  
+  /* Project Section */
+  #project{
+    padding:80px 5%;
+}
+.sub-title{
+    color:yellow;
+}
+.work-list {
+    display:grid;
+    grid-template-columns: repeat(auto-fit,(250px,1fr));
+    gap:40px; 
+}
+.work{
+    border-radius: 10px;
+    position:relative;
+    overflow:hidden;
+}
+.work img {
+    width: 400px; 
+    height: auto; 
+    object-fit:cover;
+    border-radius: 10px;
+    display:block;
+    transition:transform 0.5s;
+    font-size: 60px;
+    
+}
+
+.layer{
+    width:100%;
+    height:0%;
+    background:linear-gradient(rgba(0,0,0,0.6),#ff004f);
+    border-radius: 10ps;
+    position: absolute;
+    left:0;
+    bottom:0;
+    overflow:hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    font-size:14px ;
+    transition: height 0.5s;
+
+}
+.layer h3{
+    font-weight: 500;
+    margin-bottom:20px;
+}
+
+.layer a{
+    margin-top: 20px;
+    color:#ff004f;
+    text-decoration:underline;
+    font-size: 0px;
+    line-height: 60px;
+    background: yellow;
+    width:60px;
+    height:60px;
+    border-radius: 50px;
+    text-align: center;
+
+}
+
+.work:hover img{
+  transform:scale(1.1);
+}
+.work:hover .layer{
+  height:100%;
+}
+  
+  /* Services Section */
+  #services {
+    margin-top: 100px;
+    padding: 0 5%;
+  }
+  
+  .services-list {
+    display: flex;
+    gap: 40px;
+    padding-top: 50px;
+  }
+  
+  .service-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    background: pink;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .service-item h2,
+  .service-item h3 {
+    font-size: 40px;
+  }
+  
+  .service-item i {
+    font-size: 8px;
+    margin-bottom: 15px;
+  }
+  .service-item:hover{
+    background:#333;
+    transition: translateY(10px);
+  }
+  
+  /* Contact Section */
+  #contact {
+    margin-top: 400px;
+    padding: 0 5%;
+  }
+  
+  .contact-left {
+    flex-basis: 100%;
+    text-align: center;
+  }
+  
+  .contact-right form {
+    width: 100%;
+  }
+  
+  form input,
+  form textarea {
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: goldenrod;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+  }
+  
+  .social-icons a {
+    font-size: 30px;
+    margin-right: 15px;
+    color:red;
+  }
+  .social-icons a:hover{
+    color:#001868;
+    transform: translate(-5px);
+}
+.form.btn2{
+    padding:14px 60px;
+    font-size:18px;
+    margin-top:20px ;
+    cursor:pointer;
+}
+.copyright {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 20px; 
+    margin-top: 20px;
+    color: red;
+}
+  
+  /* Media Queries for Responsive Design */
+  
+  @media (max-width: 768px) {
+    nav ul li {
+      font-size: 20px;
+      margin-left: 20px;
+    }
+  
+    .header-text h1 {
+      font-size: 30px;
+    }
+  
+    #about .row {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .about-col-1 img {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  
+    #Skills .inline-sections {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .work-list {
+      grid-template-columns: 1fr;
+    }
+  
+    .services-list {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .service-item h2,
+    .service-item h3 {
+      font-size: 20px;
+    }
+  
+    .contact-left,
+    .contact-right {
+      flex-basis: 100%;
+      text-align: center;
+    }
+   
+  }
+  
